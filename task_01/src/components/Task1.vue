@@ -2,12 +2,13 @@
     <h1>Task 01</h1>
     <h2>Image CRUD IndexedDB</h2>
     <div>
-        <button @click="addData">Add Image</button>
-        <button @click="getData">Get Image</button>
-        <button @click="updateData">Update Image</button>
-        <button @click="deleteData">Delete Image</button>
-        <div v-if="imageData">
-            <img :src="imageData.url" alt="Stored Image" style="max-width: 100%; max-height: 300px;" />
+        <button class=btn @click="addData">Add Image</button>
+        <button class=btn @click="getData">Get Image</button>
+        <button class=btn @click="updateData">Update Image</button>
+        <button class=btn @click="deleteData">Delete Image</button>
+        <div class=div-margin v-if="imageData">
+            <img class=img-style :src="imageData.url" alt="Stored Image" style="max-width: 100%; max-height: 300px;" />
+            <!-- <img :src="imageData.url" alt="Stored Image" class="max-w-sm rounded-lg shadow-2xl" /> -->
         </div>
         <!-- <p v-if="successMessage">{{ successMessage }}</p> -->
         <!-- <DAlert
@@ -314,6 +315,11 @@ onMounted(() => {
 </style> -->
 
 <style>
+
+.btn{
+    margin-left: 5px;
+}
+
 .alert {
   position: fixed;
   bottom: 0;
@@ -345,4 +351,13 @@ onMounted(() => {
   cursor: pointer;
   font-size: 1rem;
 }
+
+.div-margin{
+    margin-top: 10px;
+}
+
+.img-style{
+    border-radius: 10px;
+}
+
 </style>
